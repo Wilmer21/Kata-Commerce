@@ -1,0 +1,66 @@
+# Dependencias
+node_modules/
+**/node_modules/
+.pnpm-store/
+**/.pnpm-store/
+
+# Salidas de compilación y empaquetado
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+
+# Reportes de cobertura y pruebas
+coverage/
+**/coverage/
+*.lcov
+.nyc_output/
+
+# Archivos de entorno (mantener sólo ejemplos sin secretos)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+!**/.env.example
+
+# Bases de datos locales SQLite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+**/data/*.db
+**/data/*.sqlite
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cachés y temporales de herramientas
+.turbo/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/extensions.json
