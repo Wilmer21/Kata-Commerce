@@ -62,7 +62,7 @@ cp .env.example .env
 
 Contenido por defecto de `.env`:
 ```env
-PORT=3001
+PORT=5000
 NODE_ENV=development
 DB_PATH=./data/ecommerce.db
 CORS_ORIGIN=http://localhost:5173
@@ -98,7 +98,7 @@ Dentro de `examen-ecommerce/apps/backend`:
 
 | Comando | Descripción |
 | :--- | :--- |
-| `pnpm dev` | Inicia el servidor de desarrollo con recarga en caliente (`tsx watch`) en `http://localhost:3001`. |
+| `pnpm dev` | Inicia el servidor de desarrollo con recarga en caliente (`tsx watch`). |
 | `pnpm db:init` | Inicializa y siembra la base de datos SQLite en `./data/ecommerce.db`. |
 | `pnpm db:view` | **Explora directamente en la terminal el contenido real de la base de datos (productos y órdenes).** |
 | `pnpm test` | Ejecuta las **43 pruebas** automatizadas en modo rápido con Vitest. |

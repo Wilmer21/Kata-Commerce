@@ -24,7 +24,7 @@ export const App: React.FC = () => {
       setProducts(data);
     } catch (err) {
       setError(
-        'No se pudo conectar con el servidor backend. Asegúrate de que el backend esté corriendo en el puerto 3001.'
+        'No se pudo conectar con el servidor backend. Asegúrate de que el backend esté corriendo en el puerto 5000.'
       );
     } finally {
       setLoading(false);

@@ -9,7 +9,7 @@ import { createApp } from './app.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const dataDir = path.resolve(__dirname, '../data');
 
 if (!fs.existsSync(dataDir)) {
