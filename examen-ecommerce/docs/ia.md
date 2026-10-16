@@ -69,6 +69,10 @@ A continuación se documenta el registro cronológico y real de las interaccione
 * **Intervención del Desarrollador**: *"no usemos npm usemos mejor pnpm que es mejor y mas seguro"*.
 * **Impacto**: Se configuró pnpm 11 y se autorizó explícitamente la compilación nativa de `better-sqlite3` con `pnpm approve-builds`, reduciendo huella en disco y aumentando la seguridad en la cadena de suministro.
 
+### Caso 3: Corrección en captura de excepciones en useCartStore
+* **Propuesta inicial de la IA**: La captura de errores en el checkout evaluaba estrictamente `err instanceof ApiError`, omitiendo errores nativos de conexión y red (`Error`).
+* **Intervención / Corrección en Auditoría**: Se corrigió para evaluar `err instanceof Error`, garantizando que cualquier fallo de transporte o red muestre un mensaje claro en la UI en lugar de un mensaje genérico.
+
 ---
 
 ## 5. Matriz de Trazabilidad de Código Asistido
@@ -80,4 +84,4 @@ A continuación se documenta el registro cronológico y real de las interaccione
 | **Motor de Descuentos** | `apps/backend/src/domain/engine/...` | Implementación con patrón Strategy y LIFO | 17 tests unitarios en Vitest, 97.5% cobertura | **Verificado** |
 | **Repositorios & Stock** | `apps/backend/src/infrastructure/...` | Implementación dual (SQLite + InMemory) | Transacciones atómicas contra sobreventa, 8 tests | **Verificado** |
 | **API Express & Zod** | `apps/backend/src/infrastructure/http/...` | Enrutamiento Express, esquemas Zod y middleware de errores | 10 tests de integración con Supertest, 97.1% cobertura total | **Verificado** |
-| **Frontend Checkout** | `apps/frontend/src/...` | *Siguiente Fase 4* | *Pendiente* | Pendiente |
+| **Frontend Checkout** | `apps/frontend/src/...` | Componentes React, Zustand store y testing library | 29 tests con React Testing Library, 96.26% cobertura | **Verificado** |

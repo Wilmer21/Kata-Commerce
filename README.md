@@ -99,10 +99,36 @@ Dentro de `examen-ecommerce/apps/backend`:
 | Comando | Descripción |
 | :--- | :--- |
 | `pnpm dev` | Inicia el servidor de desarrollo con recarga en caliente (`tsx watch`) en `http://localhost:3001`. |
+| `pnpm db:init` | Inicializa y siembra la base de datos SQLite en `./data/ecommerce.db`. |
+| `pnpm db:view` | **Explora directamente en la terminal el contenido real de la base de datos (productos y órdenes).** |
 | `pnpm test` | Ejecuta las **43 pruebas** automatizadas en modo rápido con Vitest. |
 | `pnpm test:coverage` | Corre la suite completa y genera el reporte de cobertura en terminal y en `coverage/index.html`. |
 | `pnpm build` | Compila TypeScript en modo estricto hacia JavaScript en la carpeta `dist/`. |
 | `pnpm start` | Corre el servidor compilado en producción con Node.js (`node dist/server.js`). |
+
+---
+
+## 🎨 Guía y Comandos del Frontend (React + Vite + Tailwind)
+
+Navega a la carpeta del frontend:
+```bash
+cd examen-ecommerce/apps/frontend
+```
+
+Instala las dependencias:
+```bash
+pnpm install
+```
+
+### Comandos del Frontend
+
+| Comando | Descripción |
+| :--- | :--- |
+| `pnpm dev` | Inicia la aplicación React en `http://localhost:3000` con proxy automático hacia el backend. |
+| `pnpm test` | Ejecuta las **29 pruebas** de componentes y store de Zustand con Vitest y React Testing Library. |
+| `pnpm test:coverage` | Genera el reporte de cobertura del frontend (**96.26%**) en terminal y en `coverage/index.html`. |
+| `pnpm build` | Compila TypeScript y empaqueta la aplicación de producción con Vite en la carpeta `dist/`. |
+| `pnpm preview` | Previsualiza localmente el build de producción generado. |
 
 ---
 
